@@ -6,7 +6,7 @@
 - EDR Platform: Microsoft Defender for Endpoint
 - Microsoft Sentinel
 - Kusto Query Language (KQL)
-- Powershell
+- PowerShell
 
 ##  Scenario
 
