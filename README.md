@@ -31,8 +31,8 @@ let targetMachine = "st-vm";
 DeviceProcessEvents
 | where DeviceName == targetMachine and AccountDomain != "nt authority" // avoids system accounts, only  detecting user activity
 | where InitiatingProcessFileName == "powershell.exe" or InitiatingProcessCommandLine has "pwsh"
-| where InitiatingProcessCommandLine has_any ("Invoke-WebRequest", "iwr", "Invoke-RestMethod", "irm") // catches invoke web requests and the aliases
-     and InitiatingProcessCommandLine has_any ("-ExecutionPolicy Bypass", "ep Bypass", "-ExecutionPolicy Unrestricted", "-EncodedCommand") // catches execution bypasses and the aliases
+| where ProcessCommandLine has_any ("Invoke-WebRequest", "iwr", "Invoke-RestMethod", "irm") // catches invoke web requests and the aliases
+     and ProcessCommandLine has_any ("-ExecutionPolicy Bypass", "ep Bypass", "-ExecutionPolicy Unrestricted", "-EncodedCommand") // catches execution bypasses and the aliases
 | order by TimeGenerated desc
 ```
 
