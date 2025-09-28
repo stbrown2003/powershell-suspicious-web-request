@@ -1,5 +1,8 @@
 # Incident Response Scenario: Suspicious Powershell Web Requests
 
+<img width="1915" height="764" alt="image" src="https://github.com/user-attachments/assets/d7eef435-4fcf-4b11-bef7-28a175583163" />
+
+
 ## Platforms and Languages Leveraged
 - Windows 10 Virtual Machines (Microsoft Azure)
 - EDR Platform: Microsoft Defender for Endpoint
